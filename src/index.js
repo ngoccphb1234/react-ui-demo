@@ -9,6 +9,7 @@ const element = <div className="mainDiv">
     <div className="contentDiv">
         <Header/>
         <LoginFeature/>
+        <p>376x812px</p>
     </div>
 </div>
 const root = ReactDOM.createRoot(document.getElementById('root'));
