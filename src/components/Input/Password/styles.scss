@@ -1,0 +1,21 @@
+.labelControl {
+  width: 343px;
+}
+.inputControl {
+  width: 100%;
+  border: none;
+  height: 50px;
+  text-indent:20px;
+  background-color: #F6F6F6;
+  border-radius: 7px;
+  margin-bottom: 17px;
+}
+.showPasswordTxt {
+  cursor: pointer;
+  position: absolute;
+  top: 265px;
+  right: 25px;
+  color: #5DB075;
+  font-weight: 500;
+  font-size: 16px;
+}
