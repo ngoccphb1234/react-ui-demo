@@ -1,0 +1,36 @@
+.txtCheckboxLogin {
+    color: #666666;
+    font-weight: 400;
+    font-size: 14px;
+}
+.checkBoxLogin {
+    zoom: 1.5;
+    background-color: #F6F6F6;
+    border: none;
+    margin-left: 0;
+}
+.divInlineParent {
+    overflow:hidden;
+    position:relative;
+    display:table;
+    padding-bottom: 31px;
+}
+.divInlineLeft {
+    display:table-cell;
+}
+.divInlineRight {
+    padding-left: 5px;
+    height:100%;
+    display:table-cell;
+    vertical-align: middle;
+}
+.ForgotPassword {
+    padding-top: 16px;
+    text-align: center;
+}
+.ForgotPasswordLink {
+    font-size: 16px;
+    color: #5DB075;
+    font-weight: 600;
+    text-decoration: none;
+}

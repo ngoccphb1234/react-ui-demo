@@ -18,9 +18,11 @@ Input.defaultProps = {
 function Input(inputData) {
     console.log(inputData)
     return (
-        <label className="labelControl">
-            <input type="text" name={inputData.inputData.name} placeholder={inputData.inputData.labelPlaceholder} className="inputControl" />
-        </label>
+        <div className="divInput">
+            {/*<label className="labelControl">*/}
+                <input type="text" name={inputData.inputData.name} placeholder={inputData.inputData.labelPlaceholder} className="inputControl" />
+            {/*</label>*/}
+        </div>
     );
 }
 

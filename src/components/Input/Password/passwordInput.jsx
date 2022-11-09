@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss'
 import Input from "../input";
@@ -17,11 +17,15 @@ Input.defaultProps = {
 }
 
 function PasswordInput(inputData) {
+    const [showPassword, setShowPassword] = useState(false)
+    function handleShowHidePassword() {
+        setShowPassword(!showPassword)
+    }
     return (
-        <label className="labelControl">
-            <input type="password" name={inputData.inputData.name} placeholder={inputData.inputData.labelPlaceholder} className="inputControl" />
-            <span className="showPasswordTxt">Show</span>
-        </label>
+        <div className="divInputPassword">
+                <input type={showPassword ? 'text' : 'password'} name={inputData.inputData.name} placeholder={inputData.inputData.labelPlaceholder} className="inputPassword" />
+                <span onClick={handleShowHidePassword} className="showPasswordTxt">{showPassword ? 'Hide' : 'Show'}</span>
+        </div>
     );
 }
 

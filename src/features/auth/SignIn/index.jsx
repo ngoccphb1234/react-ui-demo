@@ -5,15 +5,11 @@ import Input from "../../../components/Input/input";
 import PasswordInput from "../../../components/Input/Password/passwordInput";
 import Button from "../../../components/Button/button";
 
-LoginFeature.propTypes = {
+SignInFeature.propTypes = {
 
 };
 
-function LoginFeature() {
-    const inputName = {
-        labelPlaceholder: 'Name',
-        name: 'name'
-    }
+function SignInFeature() {
     const inputEmail = {
         labelPlaceholder: 'Email',
         name: 'email'
@@ -23,23 +19,14 @@ function LoginFeature() {
         name: 'password'
     }
     const dataButton = {
-        text: 'Sign Up',
+        text: 'Log In',
         backgroundColor: '#5DB075'
     }
     return (
         <div>
             <form action="#">
-                <Input inputData={inputName}/>
                 <Input inputData={inputEmail}/>
                 <PasswordInput  inputData={inputPassword}/>
-                <div className="divInlineParent">
-                    <div className="divInlineLeft">
-                        <input className="checkBoxLogin" type="checkbox"/>
-                    </div>
-                    <div className="divInlineRight">
-                        <span className="txtCheckboxLogin">I would like to receive your newsletter and other promotional information.</span>
-                    </div>
-                </div>
                 <Button dataButton={dataButton}/>
             </form>
             <div className="ForgotPassword">
@@ -49,4 +36,4 @@ function LoginFeature() {
     );
 }
 
-export default LoginFeature;
+export default SignInFeature;

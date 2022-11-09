@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import LoginFeature from "./features/auth/login";
 import Header from "./components/Header/header";
+import SignUpFeature from "./features/auth/SignUp";
+import SignInFeature from "./features/auth/SignIn";
 
+const listContentHeader = {
+    leftType: '',
+    rightText: '',
+    mainText: 'Log In',
+    leftText: ''
+}
 
 const element = <div className="mainDiv">
     <div className="contentDiv">
-        <Header/>
-        <LoginFeature/>
+        <Header listContentHeader={listContentHeader}/>
+        {/*<SignUpFeature/>*/}
+        <SignInFeature/>
     </div>
 </div>
 const root = ReactDOM.createRoot(document.getElementById('root'));

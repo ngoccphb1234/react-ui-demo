@@ -3,15 +3,11 @@
 body {
   margin: 0;
   font-family: 'Inter', cursive;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   width: 100%;
   height: 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 .mainDiv {
   width: 375px;
@@ -19,4 +15,7 @@ code {
 }
 .contentDiv{
   padding: 0 16px;
+}
+input:focus, textarea:focus, select:focus{
+  outline: none;
 }

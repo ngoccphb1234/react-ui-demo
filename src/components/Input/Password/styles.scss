@@ -1,21 +1,31 @@
-.labelControl {
-  width: 343px;
-}
-.inputControl {
-  width: 100%;
+
+.inputPassword {
+  width: 77%;
   border: none;
   height: 50px;
-  text-indent:20px;
+  //text-indent:20px;
+  padding-left: 20px;
   background-color: #F6F6F6;
-  border-radius: 7px;
-  margin-bottom: 17px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  font-style: normal;
+  border-radius: 8px;
+  color: #BDBDBD;
 }
 .showPasswordTxt {
   cursor: pointer;
-  position: absolute;
-  top: 265px;
-  right: 25px;
+  //position: absolute;
+  //top: 266px;
+  //right: 25px;
   color: #5DB075;
   font-weight: 500;
   font-size: 16px;
+  padding-left: 5px;
+}
+.divInputPassword {
+  height: 52px;
+  background-color: #F6F6F6;
+  margin-bottom: 17px;
+  border-radius: 8px;
 }
