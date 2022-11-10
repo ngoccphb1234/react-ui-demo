@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom'
 import './styles.scss'
 import {AiOutlineClose} from "react-icons/ai";
 
@@ -15,13 +16,29 @@ Header.defaultProps = {
     listContentHeader: {
         leftType: 'button',
         rightText: 'Login',
-        mainText: 'Sign Up',
+        mainText: '',
         leftText: 'Back'
     },
 
 }
 
+
+
 function Header({listContentHeader}) {
+    const [mainText, setMainText] = useState('');
+
+    // if (window.location.pathname === '/login'){
+    //     console.log(1);
+    // }else if(window.location.pathname === '/register'){
+    //     console.log(2)
+    // }else {
+    //     console.log(3)
+    // }
+
+    function handleChangeMainText() {
+        setMainText(  'login')
+    }
+
     let leftButton  = ''
     if (listContentHeader.leftType === 'text') {
         leftButton = <span>
@@ -43,10 +60,10 @@ function Header({listContentHeader}) {
                <a href={'http://localhost:3000/'} className="txtLeftHeader">{leftButton}</a>
             </li>
             <li className="liMainText">
-                <span className="mainText">{listContentHeader.mainText}</span>
+                <span className="mainText">{mainText}</span>
             </li>
             <li className="liRight">
-              <a href={'http://localhost:3000/'} className="txtRightHeader">{listContentHeader.rightText}</a>
+              <Link to={'login'} className="txtRightHeader" onClick={handleChangeMainText}>{listContentHeader.rightText}</Link>
             </li>
         </ul>
     </div>

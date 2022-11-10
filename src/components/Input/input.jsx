@@ -16,7 +16,6 @@ Input.defaultProps = {
 }
 
 function Input(inputData) {
-    console.log(inputData)
     return (
         <div className="divInput">
             {/*<label className="labelControl">*/}
