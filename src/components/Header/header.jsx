@@ -14,61 +14,55 @@ Header.propTypes = {
 
 Header.defaultProps = {
     listContentHeader: {
-        leftType: 'button',
-        rightText: 'Login',
+        leftType: null,
+        rightText: null,
         mainText: '',
-        leftText: 'Back'
+        leftText: ''
     },
 
 }
 
 
-
 function Header({listContentHeader}) {
-    const [mainText, setMainText] = useState('');
 
-    // if (window.location.pathname === '/login'){
-    //     console.log(1);
-    // }else if(window.location.pathname === '/register'){
-    //     console.log(2)
-    // }else {
-    //     console.log(3)
-    // }
 
-    function handleChangeMainText() {
-        setMainText(  'login')
-    }
-
-    let leftButton  = ''
+    let leftButton = ''
     if (listContentHeader.leftType === 'text') {
-        leftButton = <span>
+        leftButton = <li className="liLeft"><span>
             {listContentHeader.leftText}
         </span>
+        </li>
     } else if (listContentHeader.leftType === 'button') {
 
-        leftButton = <span className="closeButtonHeader">
+        leftButton =
+            <li className="liLeft">
+                <a href={'http://localhost:3000/'} className="txtLeftHeader">
+                    <span className="closeButtonHeader">
             <AiOutlineClose/>
         </span>
-    }else {
+                </a>
+            </li>
+
+    } else {
         leftButton = ''
     }
 
-    const element =
-        <div className="v-effect-link">
-        <ul>
-            <li className="liLeft">
-               <a href={'http://localhost:3000/'} className="txtLeftHeader">{leftButton}</a>
-            </li>
-            <li className="liMainText">
-                <span className="mainText">{mainText}</span>
-            </li>
-            <li className="liRight">
-              <Link to={'login'} className="txtRightHeader" onClick={handleChangeMainText}>{listContentHeader.rightText}</Link>
-            </li>
-        </ul>
-    </div>
+    let rightTextContent =
+        <li className="liRight">
+        <Link to={'sign-in'} className="txtRightHeader">{listContentHeader.rightText}</Link>
+    </li>
+
     return (
-        element
+        <div className="v-effect-link">
+            <ul>
+                {leftButton ? leftButton: ''}
+
+                <li className="liMainText">
+                    <span className="mainText">{listContentHeader.mainText}</span>
+                </li>
+                {listContentHeader.rightText ? rightTextContent : ''}
+            </ul>
+        </div>
     );
 }
 

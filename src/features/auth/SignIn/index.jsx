@@ -4,6 +4,7 @@ import './styles.css'
 import Input from "../../../components/Input/input";
 import PasswordInput from "../../../components/Input/Password/passwordInput";
 import Button from "../../../components/Button/button";
+import Header from "../../../components/Header/header";
 
 SignInFeature.propTypes = {
 
@@ -22,8 +23,12 @@ function SignInFeature() {
         text: 'Log In',
         backgroundColor: '#5DB075'
     }
+    const listContentHeader = {
+        mainText: 'Log In',
+    }
     return (
         <div>
+            <Header listContentHeader={listContentHeader}/>
             <form action="#">
                 <Input inputData={inputEmail}/>
                 <PasswordInput  inputData={inputPassword}/>
