@@ -14,6 +14,7 @@ code {
   height: 812px;
 }
 .contentDiv{
+  height: 100%;
   padding: 0 16px;
 }
 input:focus, textarea:focus, select:focus{
@@ -44,4 +45,9 @@ input:focus, textarea:focus, select:focus{
 
 #sendmessage.show,.show  {
   display:block;
+}
+
+.divErrorMessage {
+  min-height: 20px;
+  /*margin-bottom: 17px;*/
 }

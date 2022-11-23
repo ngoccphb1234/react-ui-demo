@@ -1,35 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss'
+import {ErrorMessage} from "formik";
+import ShowMessage from "../MessageContent/showMessage";
 
 Input.propTypes = {
-    inputData: PropTypes.object.isRequired,
-    labelPlaceholder: PropTypes.string,
+    placeholder: PropTypes.string,
     name: PropTypes.string,
-    errors: PropTypes.array,
+    type: PropTypes.string,
+    disabled: PropTypes.bool
 
 };
 
 Input.defaultProps = {
-    inputData: {
-        labelPlaceholder: '',
-        name: '',
-        value: '',
-        onChange: null
-    },
-    errors: []
-
+    placeholder: '',
+    name: '',
+    type: 'text',
+    disabled: false
 }
 
-function Input(inputData, errors) {
-    console.log(errors);
+function Input(props) {
+    const {field, form, type, placeholder, disabled} = props;
+    const {name} = field;
+    // const {errors, touched} = form;
+    // const showError = errors[name] && touched[name]
     return (
+        <div>
         <div className="divInput">
-            {/*<label className="labelControl">*/}
-                <input type="text" value={inputData.inputData.value} onChange={inputData.inputData.onChange} name={inputData.inputData.name} placeholder={inputData.inputData.labelPlaceholder} className="inputControl" />
-            {errors.name && <div className="validation" style={{display: 'block'}}>{errors.name}</div>}
+            <input className="inputControl"
+                   id={name}
+                   {...field}
+                   type={type}
+                   disabled={disabled}
+                   placeholder={placeholder}
 
-            {/*</label>*/}
+            />
+        </div>
+            <div className="divErrorMessage">
+                <ErrorMessage name={name} component={ShowMessage}></ErrorMessage>
+            </div>
         </div>
     );
 }

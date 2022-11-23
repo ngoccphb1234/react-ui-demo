@@ -1,0 +1,9 @@
+ul .activeTodo {
+  transition: all 0.35s ease-in-out 0s;
+}
+ul li {
+  cursor: pointer;
+}
+.activeTodo {
+  color: #5DB075;
+}

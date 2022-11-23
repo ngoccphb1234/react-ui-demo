@@ -6,6 +6,8 @@ import {
     BrowserRouter,
 } from "react-router-dom";
 import App from "./App";
+import {Provider} from "react-redux";
+import store from "./store";
 
 // import Header from "./components/Header/header";
 // import Routers from "./routes/routes";
@@ -24,14 +26,16 @@ import App from "./App";
 //     </div>
 // </div>
 
-
 const root = ReactDOM.createRoot(document.getElementById('app'));
 
 root.render(
- <React.StrictMode>
-     <BrowserRouter>
-         <App/>
-     </BrowserRouter>
- </React.StrictMode>
+    <Provider store={store}>
+
+        <React.StrictMode>
+            <BrowserRouter>
+                <App/>
+            </BrowserRouter>
+        </React.StrictMode>
+    </Provider>
 );
 

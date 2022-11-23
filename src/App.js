@@ -2,6 +2,11 @@ import Header from "./components/Header/header";
 import {Route, Routes} from "react-router-dom";
 import SignUpFeature from "./features/auth/SignUp";
 import SignInFeature from "./features/auth/SignIn";
+import FeedFeature from "./features/feed";
+import {connect} from "react-redux";
+import {mapStateToProps} from "react-redux/es/connect/mapStateToProps";
+import ReduxHomePage from "./features/reduxDemo/ReduxHomePage";
+
 
 function App() {
     return <div className="mainDiv">
@@ -10,9 +15,12 @@ function App() {
             <Routes>
                 <Route path="/" element={<SignUpFeature/>}></Route>
                 <Route path="/sign-in" element={<SignInFeature/>}></Route>
+                <Route path="/feed" element={<FeedFeature/>}></Route>
+                <Route path="/demo" element={<ReduxHomePage/>}></Route>
             </Routes>
         </div>
     </div>
 }
+
 
 export default App

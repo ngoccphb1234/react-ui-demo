@@ -43,7 +43,14 @@ function Header({listContentHeader}) {
                 </a>
             </li>
 
-    } else {
+    }
+    else if (listContentHeader.leftType === 'link') {
+        leftButton = <li className="liLeft"><a className="linkLeft" href="#">
+            {listContentHeader.leftText}
+        </a>
+        </li>
+    }
+    else {
         leftButton = ''
     }
 
