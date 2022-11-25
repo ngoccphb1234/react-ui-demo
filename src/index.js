@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import {Provider} from "react-redux";
-import store from "./store";
+import store from "./redux/store";
 
 // import Header from "./components/Header/header";
 // import Routers from "./routes/routes";

@@ -9,6 +9,7 @@ Header.propTypes = {
     mainText: PropTypes.string,
     leftText: PropTypes.string,
     leftType: PropTypes.string,
+    pathRedirect: PropTypes.string,
 
 };
 
@@ -17,7 +18,8 @@ Header.defaultProps = {
         leftType: null,
         rightText: null,
         mainText: '',
-        leftText: ''
+        leftText: '',
+        pathRedirect: ''
     },
 
 }
@@ -36,7 +38,7 @@ function Header({listContentHeader}) {
 
         leftButton =
             <li className="liLeft">
-                <a href={'http://localhost:3000/'} className="txtLeftHeader">
+                <a href={window.location.host} className="txtLeftHeader">
                     <span className="closeButtonHeader">
             <AiOutlineClose/>
         </span>
@@ -53,10 +55,9 @@ function Header({listContentHeader}) {
     else {
         leftButton = ''
     }
-
     let rightTextContent =
         <li className="liRight">
-        <Link to={'sign-in'} className="txtRightHeader">{listContentHeader.rightText}</Link>
+        <Link to={listContentHeader.pathRedirect} className="txtRightHeader">{listContentHeader.rightText}</Link>
     </li>
 
     return (

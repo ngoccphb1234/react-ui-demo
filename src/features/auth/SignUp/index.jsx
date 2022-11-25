@@ -21,6 +21,7 @@ function SignUpFeature() {
         leftType: 'button',
         rightText: 'Login',
         mainText: 'Sign Up',
+        pathRedirect: 'sign-up',
     }
 
     const initValues = {
