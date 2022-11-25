@@ -1,4 +1,4 @@
-import {Route,Routes } from "react-router-dom";
+import {Route,Routes,Router } from "react-router-dom";
 import SignUpFeature from "./features/auth/SignUp";
 import SignInFeature from "./features/auth/SignIn";
 import FeedFeature from "./features/feed";
@@ -10,8 +10,8 @@ function App() {
         <div className="contentDiv">
             {/*<Header />*/}
             <Routes>
-                <Route path="/" exact element={<TodoHomePage/>}></Route>
-                <Route path="/register" element={<SignUpFeature/>}></Route>
+                <Route path="/" exact element={<SignUpFeature/>}></Route>
+                <Route path="/todos" element={<TodoHomePage/>}></Route>
                 <Route path="sign-in" element={<SignInFeature/>}></Route>
                 <Route path="/feed" element={<FeedFeature/>}></Route>
             </Routes>

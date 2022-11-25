@@ -27,7 +27,6 @@ Header.defaultProps = {
 
 function Header({listContentHeader}) {
 
-
     let leftButton = ''
     if (listContentHeader.leftType === 'text') {
         leftButton = <li className="liLeft"><span>
@@ -55,9 +54,10 @@ function Header({listContentHeader}) {
     else {
         leftButton = ''
     }
-    let rightTextContent =
+
+     let rightTextContent =
         <li className="liRight">
-        <Link to={listContentHeader.pathRedirect} className="txtRightHeader">{listContentHeader.rightText}</Link>
+        <Link to={'sign-in'} className="txtRightHeader">{listContentHeader.rightText}</Link>
     </li>
 
     return (
