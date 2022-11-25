@@ -32,7 +32,7 @@ root.render(
     <Provider store={store}>
 
         <React.StrictMode>
-            <HashRouter base="/">
+            <HashRouter>
                 <App/>
             </HashRouter>
         </React.StrictMode>
