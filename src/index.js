@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import './index.css';
 
 import {
-    HashRouter,
+    BrowserRouter,
 } from "react-router-dom";
 import App from "./App";
 import {Provider} from "react-redux";
@@ -32,9 +32,9 @@ root.render(
     <Provider store={store}>
 
         <React.StrictMode>
-            <HashRouter>
+            <BrowserRouter>
                 <App/>
-            </HashRouter>
+            </BrowserRouter>
         </React.StrictMode>
     </Provider>
 );

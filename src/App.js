@@ -1,4 +1,4 @@
-import {Route, Routes} from "react-router-dom";
+import {Route,Routes } from "react-router-dom";
 import SignUpFeature from "./features/auth/SignUp";
 import SignInFeature from "./features/auth/SignIn";
 import FeedFeature from "./features/feed";
@@ -12,7 +12,7 @@ function App() {
             <Routes>
                 <Route path="/" exact element={<TodoHomePage/>}></Route>
                 <Route path="/register" element={<SignUpFeature/>}></Route>
-                <Route path="/sign-in" element={<SignInFeature/>}></Route>
+                <Route path="sign-in" element={<SignInFeature/>}></Route>
                 <Route path="/feed" element={<FeedFeature/>}></Route>
             </Routes>
         </div>
